@@ -1,612 +1,481 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tejaswini's portfolio showcasing education, projects, internships, skills, certificates, and publication.">
-    <meta name="author" content="Tejaswini">
-    <title>Tejaswini | Professional Portfolio</title>
-
-    <style>
-        :root {
-            --primary: #6c63ff;
-            --secondary: #f0efff;
-            --dark: #202033;
-            --text: #55566a;
-            --white: #ffffff;
-            --background: #f8f9fc;
-            --border: #e5e7ef;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 90px;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: var(--background);
-            color: var(--text);
-            line-height: 1.7;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        .container {
-            width: min(1100px, 90%);
-            margin: auto;
-        }
-
-        header {
-            background: var(--white);
-            border-bottom: 1px solid var(--border);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        nav {
-            min-height: 70px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 15px;
-            padding: 12px 0;
-        }
-
-        .logo {
-            font-size: 1.4rem;
-            font-weight: bold;
-            color: var(--primary);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-            list-style: none;
-            font-size: 0.9rem;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary);
-        }
-
-        .hero {
-            padding: 100px 0;
-            background: linear-gradient(135deg, #f0efff, #ffffff);
-        }
-
-        .hero-content {
-            max-width: 780px;
-        }
-
-        .eyebrow,
-        .section-subtitle {
-            color: var(--primary);
-            font-weight: bold;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            font-size: 0.8rem;
-        }
-
-        .hero h1 {
-            color: var(--dark);
-            font-size: clamp(2.3rem, 6vw, 4rem);
-            line-height: 1.2;
-            margin: 15px 0;
-        }
-
-        .hero h2 {
-            font-size: clamp(1.2rem, 3vw, 1.7rem);
-            font-weight: 500;
-            margin-bottom: 20px;
-        }
-
-        .button {
-            display: inline-block;
-            background: var(--primary);
-            color: white;
-            padding: 12px 22px;
-            border-radius: 8px;
-            margin: 22px 10px 0 0;
-            font-weight: bold;
-        }
-
-        .button.secondary {
-            color: var(--primary);
-            background: white;
-            border: 1px solid var(--primary);
-        }
-
-        .section {
-            padding: 75px 0;
-        }
-
-        .section-heading {
-            margin-bottom: 30px;
-        }
-
-        .section-heading h2 {
-            color: var(--dark);
-            font-size: clamp(1.8rem, 4vw, 2.5rem);
-            margin-top: 5px;
-        }
-
-        .section-intro {
-            max-width: 780px;
-            margin-bottom: 25px;
-        }
-
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 22px;
-        }
-
-        .info-card {
-            background: var(--white);
-            padding: 25px;
-            border: 1px solid var(--border);
-            border-radius: 14px;
-            box-shadow: 0 5px 18px rgba(25, 25, 60, 0.04);
-            overflow-wrap: anywhere;
-        }
-
-        .info-card h3 {
-            color: var(--dark);
-            font-size: 1.1rem;
-            line-height: 1.5;
-            margin: 8px 0;
-        }
-
-        .card-date {
-            color: var(--primary);
-            font-size: 0.85rem;
-            font-weight: bold;
-        }
-
-        .text-link {
-            display: inline-block;
-            color: var(--primary);
-            font-weight: bold;
-            margin-top: 14px;
-        }
-
-        .text-link:hover {
-            text-decoration: underline;
-        }
-
-        .tag-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            list-style: none;
-            margin-top: 15px;
-            margin-bottom: 22px;
-        }
-
-        .tag-list li {
-            background: var(--secondary);
-            color: var(--primary);
-            border-radius: 20px;
-            padding: 7px 13px;
-            font-size: 0.9rem;
-        }
-
-        .alternate {
-            background: #f0efff;
-        }
-
-        .contact-card {
-            background: white;
-            border: 1px solid var(--border);
-            padding: 28px;
-            border-radius: 14px;
-            max-width: 750px;
-        }
-
-        .contact-card p {
-            margin: 10px 0;
-            overflow-wrap: anywhere;
-        }
-
-        footer {
-            text-align: center;
-            padding: 25px 0;
-            background: var(--dark);
-            color: white;
-        }
-
-        @media (max-width: 650px) {
-            nav {
-                align-items: flex-start;
-            }
-
-            .nav-links {
-                gap: 10px 14px;
-            }
-
-            .hero {
-                padding: 70px 0;
-            }
-
-            .section {
-                padding: 55px 0;
-            }
-        }
-    </style>
+    <meta name="description" content="Portfolio of Gavara Tejaswini, final-year Computer Science Engineering student.">
+    <title>Gavara Tejaswini | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header>
-    <nav class="container" aria-label="Main navigation">
-        <a class="logo" href="#home">Tejaswini.</a>
+<header class="header">
+    <a href="#home" class="logo">Tejaswini<span></span></a>
 
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#internships">Internships</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#certifications">Certificates</a></li>
-            <li><a href="#activities">Activities</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+    <button class="menu-toggle" id="menu-toggle"
+        aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+    <nav class="navbar" id="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Internships</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#certifications">Certificates</a>
+        <a href="#contact">Contact</a>
     </nav>
 </header>
 
 <main>
-
-    <!-- HOME -->
-    <section id="home" class="hero">
-        <div class="container hero-content">
-            <p class="eyebrow">Welcome to My Portfolio</p>
-            <h1>Hi, I'm Tejaswini</h1>
-            <h2>Computer Science and Engineering Student</h2>
+    <!-- Home -->
+    <section class="home section" id="home">
+        <div class="home-content">
+            <p class="eyebrow">Hello, welcome to my portfolio</p>
+            <h1>I'm <span>Gavara Tejaswini</span></h1>
+            <h2>Final-Year Computer Science Engineering Student</h2>
             <p>
-                I am a final-year B.Tech CSE student interested in software
-                development, artificial intelligence, web technologies, and
-                building practical technology solutions.
+                I am passionate about software development, web technologies,
+                artificial intelligence, and learning new technologies.
+                I am looking for an opportunity to apply my skills and
+                develop my professional career.
             </p>
-            <a class="button" href="#projects">Explore My Projects</a>
-            <a class="button secondary" href="#contact">Contact Me</a>
+
+            <div class="button-group">
+                <a href="#projects" class="btn">Explore My Projects</a>
+                <a href="#contact" class="btn btn-outline">Contact Me</a>
+            </div>
+
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/gavara-tejaswini-1335362ba"
+                   target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://github.com/Tejaswini-2712"
+                   target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+
+        <div class="profile-avatar">
+            <img src="./profile.jpg" alt="Gavara Tejaswini">
         </div>
     </section>
 
-    <!-- ABOUT -->
-    <section id="about" class="section">
-        <div class="container">
-            <div class="section-heading">
-                <p class="section-subtitle">Get to Know Me</p>
-                <h2>About Me</h2>
-            </div>
-            <p class="section-intro">
-                I am a final-year Computer Science and Engineering student
-                developing my technical knowledge through academic projects,
-                internships, certifications, and practical learning. I aim to
-                begin my professional career in a role where I can apply my
-                skills, learn new technologies, and contribute to meaningful
-                projects.
+    <!-- About -->
+    <section class="section" id="about">
+        <h2 class="section-title">About <span>Me</span></h2>
+        <div class="about-card">
+            <p>
+                I am a final-year B.Tech student in Computer Science and
+                Engineering at Dadi Institute of Engineering and Technology.
+                I have a foundation in programming, web development,
+                object-oriented programming, and data structures.
             </p>
+            <p>
+                I enjoy working on practical projects and exploring
+                technologies such as artificial intelligence and deep learning.
+                My goal is to begin my professional career, gain practical
+                experience, and continue improving my technical skills.
+            </p>
+            <p><strong>CGPA:</strong> 8.53</p>
         </div>
     </section>
 
-    <!-- EDUCATION -->
-    <section id="education" class="section alternate">
-        <div class="container">
-            <div class="section-heading">
-                <p class="section-subtitle">Academic Background</p>
-                <h2>Education</h2>
-            </div>
-            <div class="info-grid">
-                <article class="info-card">
-                    <p class="card-date">B.Tech</p>
-                    <h3>Computer Science and Engineering</h3>
-                    <p>Dadi Institute of Engineering and Technology</p>
-                    <p>Final-year student</p>
-                </article>
-            </div>
-        </div>
-    </section>
+    <!-- Education -->
+    <section class="section" id="education">
+        <h2 class="section-title">My <span>Education</span></h2>
 
-    <!-- INTERNSHIPS -->
-    <section id="internships" class="section">
-        <div class="container">
-            <div class="section-heading">
-                <p class="section-subtitle">Practical Learning</p>
-                <h2>Internships & Training</h2>
-            </div>
-
-            <div class="info-grid">
-                <article class="info-card">
-                    <p class="card-date">June – July 2026</p>
-                    <h3>Web Development Internship</h3>
-                    <p><strong>Thiranex</strong></p>
-                    <p>Web development learning and practical experience.</p>
-                </article>
-
-                <article class="info-card">
-                    <p class="card-date">January – March 2026</p>
-                    <h3>Prompt Engineering</h3>
-                    <p><strong>EduSkills</strong></p>
-                    <p>Learning prompt design and generative AI concepts.</p>
-                </article>
-
-                <article class="info-card">
-                    <p class="card-date">January – March 2025</p>
-                    <h3>Google Android Development</h3>
-                    <p><strong>EduSkills</strong></p>
-                    <p>Android development learning program.</p>
-                </article>
-
-                <article class="info-card">
-                    <p class="card-date">November 2025</p>
-                    <h3>Android App Development Workshop</h3>
-                    <p><strong>APSSDC</strong></p>
-                    <p>Participation in an Android application development workshop.</p>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects" class="section alternate">
-        <div class="container">
-            <div class="section-heading">
-                <p class="section-subtitle">What I've Worked On</p>
-                <h2>My Projects</h2>
-            </div>
-
-            <div class="info-grid">
-                <article class="info-card">
-                    <p class="card-date">Automation & IoT</p>
-                    <h3>Automated Fan Control System</h3>
-                    <p>
-                        An automated system designed to control fan operation
-                        based on environmental conditions, with the aim of
-                        improving convenience and energy efficiency.
-                    </p>
-                    <a href="./Automated-Fan-Control-System.docx"
-                       class="text-link"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        View Project Document →
-                    </a>
-                </article>
-
-                <article class="info-card">
-                    <p class="card-date">Deep Learning & Computer Vision</p>
-                    <h3>Vision-Based Parking Occupancy Detection and Protection Using Convolutional Neural Networks</h3>
-                    <p>
-                        A parking occupancy monitoring application that uses
-                        video processing, OpenCV, and a CNN model to classify
-                        parking spaces as empty or occupied.
-                    </p>
-                    <p><strong>Technologies:</strong> Python, Flask, OpenCV, TensorFlow, CNN</p>
-                    <a href="./fan-project.html"
-                       class="text-link">
-                        View Project →
-                    </a>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills" class="section">
-        <div class="container">
-            <div class="section-heading">
-                <p class="section-subtitle">Technical Knowledge</p>
-                <h2>My Skills</h2>
-            </div>
+        <div class="card-grid">
+            <article class="info-card">
+                <p class="card-date">B.Tech</p>
+                <h3>Computer Science and Engineering</h3>
+                <p>Dadi Institute of Engineering and Technology</p>
+                <p><strong>CGPA:</strong> 8.53</p>
+                <p>Final Year</p>
+            </article>
 
             <article class="info-card">
-                <h3>Programming Languages</h3>
-                <ul class="tag-list">
-                    <li>C</li>
-                    <li>Java</li>
-                    <li>Python (Basic)</li>
-                </ul>
+                <p class="card-date">Intermediate</p>
+                <h3>MPC</h3>
+                <p>Sri Chaitanya Junior College</p>
+                <p><strong>Percentage:</strong> 87.5%</p>
+            </article>
 
-                <h3>Web Technologies</h3>
-                <ul class="tag-list">
-                    <li>HTML</li>
-                    <li>CSS</li>
-                </ul>
-
-                <h3>Core Concepts</h3>
-                <ul class="tag-list">
-                    <li>Object-Oriented Programming</li>
-                    <li>Data Structures and Algorithms (Basics)</li>
-                    <li>Prompt Engineering</li>
-                    <li>Generative AI</li>
-                    <li>Machine Learning Fundamentals</li>
-                </ul>
-
-                <h3>Tools</h3>
-                <ul class="tag-list">
-                    <li>MS Word</li>
-                    <li>MS Excel</li>
-                    <li>PowerPoint</li>
-                    <li>VS Code</li>
-                    <li>GitHub</li>
-                </ul>
+            <article class="info-card">
+                <p class="card-date">SSC</p>
+                <h3>Secondary School</h3>
+                <p>Bhashyam School</p>
+                <p><strong>Percentage:</strong> 100%</p>
             </article>
         </div>
     </section>
 
-    <!-- CERTIFICATES: PDF FILES ARE BESIDE index.html -->
-    <section id="certifications" class="section alternate">
-        <div class="container">
-            <div class="section-heading">
-                <p class="section-subtitle">Learning & Development</p>
-                <h2>My Certificates</h2>
+    <!-- Internships -->
+    <section class="section" id="experience">
+        <h2 class="section-title">Internships & <span>Training</span></h2>
+
+        <div class="card-grid">
+            <!-- Web Development Internship -->
+<article class="info-card">
+    <p class="card-date">June – July 2026</p>
+    <h3>Web Development Internship</h3>
+    <p><strong>Thiranex</strong></p>
+    <p>Web development learning and practical experience.</p>
+    <a href="./certificates/thiranex-web-development.pdf"
+       class="text-link"
+       target="_blank"
+       rel="noopener noreferrer">
+        View Certificate →
+    </a>
+</article>
+
+<!-- Prompt Engineering -->
+<article class="info-card">
+    <p class="card-date">January – March 2026</p>
+    <h3>Prompt Engineering</h3>
+    <p><strong>EduSkills</strong></p>
+    <p>Learning prompt design and generative AI concepts.</p>
+    <a href="./certificates/eduskills-prompt-engineering.pdf"
+       class="text-link"
+       target="_blank"
+       rel="noopener noreferrer">
+        View Certificate →
+    </a>
+</article>
+
+<!-- Google Android Development -->
+<article class="info-card">
+    <p class="card-date">January – March 2025</p>
+    <h3>Google Android Development</h3>
+    <p><strong>EduSkills</strong></p>
+    <p>Android development learning program.</p>
+    <a href="./certificates/eduskills-android-development.pdf"
+       class="text-link"
+       target="_blank"
+       rel="noopener noreferrer">
+        View Certificate →
+    </a>
+</article>
+
+<!-- Android App Development Workshop -->
+<article class="info-card">
+    <p class="card-date">November 2025</p>
+    <h3>Android App Development Workshop</h3>
+    <p><strong>APSSDC</strong></p>
+    <p>Participation in an Android application development workshop.</p>
+    <a href="./certificates/apssdc-android-workshop.pdf"
+       class="text-link"
+       target="_blank"
+       rel="noopener noreferrer">
+        View Certificate →
+    </a>
+</article>
+        </div>
+    </section>
+
+    
+<!-- Projects -->
+<section class="section" id="projects">
+    <h2 class="section-title">My <span>Projects</span></h2>
+
+    <div class="card-grid project-grid">
+
+        <!-- Automated Fan Control System -->
+        <article class="project-card">
+            <div class="project-icon">⚙</div>
+            <p class="card-date">April 2025</p>
+
+            <h3>Automated Fan Control System</h3>
+
+            <p>
+                An automated fan control system designed to adjust
+                fan operation based on environmental conditions,
+                helping improve comfort and energy efficiency.
+            </p>
+
+            <p class="tech-stack">
+                <strong>Focus:</strong> Automation and fan control
+            </p>
+
+            <a
+                href="https://github.com/Tejaswini-2712/Tejaswini-portfolio/blob/main/Automated-Fan-Control-System.docx"
+                class="text-link"
+                target="_blank"
+                rel="noopener noreferrer">
+                View Project →
+            </a>
+        </article>
+
+        <!-- Vision-Based Parking Project -->
+        <article class="project-card">
+            <div class="project-icon">🚗</div>
+            <p class="card-date">Academic Project</p>
+
+            <h3>
+                Vision-Based Parking Occupancy Detection and Prevention
+                Using Deep Learning Models
+            </h3>
+
+            <p>
+                A vision-based parking system that processes parking-lot
+                videos and uses deep learning to classify parking spaces
+                as empty or occupied.
+            </p>
+
+            <p class="tech-stack">
+                <strong>Technologies:</strong>
+                Python, Flask, OpenCV, TensorFlow/Keras, CNN
+            </p>
+
+            <span class="status-label">In Progress</span>
+        </article>
+
+    </div>
+</section>
+
+
+    <!-- Skills -->
+    <section class="section" id="skills">
+        <h2 class="section-title">Technical <span>Skills</span></h2>
+
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>Programming Languages</h3>
+                <div class="skill-tags">
+                    <span>C</span><span>Java</span><span>Python (Basic)</span>
+                </div>
             </div>
 
-            <div class="info-grid">
+            <div class="skill-card">
+                <h3>Web Technologies</h3>
+                <div class="skill-tags">
+                    <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                </div>
+            </div>
 
-                <article class="info-card">
-                    <h3>Oracle Cloud Infrastructure Certified AI Foundations Associate</h3>
-                    <a href="./oracle-ai.pdf" class="text-link" target="_blank" rel="noopener noreferrer">View Certificate →</a>
-                </article>
+            <div class="skill-card">
+                <h3>Core Concepts</h3>
+                <div class="skill-tags">
+                    <span>OOP</span><span>DSA Basics</span>
+                </div>
+            </div>
 
-                <article class="info-card">
-                    <h3>TCS iON Yuva AI for All</h3>
-                    <a href="./tcs-yuva-ai.pdf" class="text-link" target="_blank" rel="noopener noreferrer">View Certificate →</a>
-                </article>
+            <div class="skill-card">
+                <h3>Tools & Technologies</h3>
+                <div class="skill-tags">
+                    <span>MS Word</span><span>Excel</span>
+                    <span>PowerPoint</span><span>OpenCV</span>
+                </div>
+            </div>
 
-                <article class="info-card">
-                    <h3>Google Cloud Generative AI</h3>
-                    <a href="./google-generative-ai.pdf" class="text-link" target="_blank" rel="noopener noreferrer">View Certificate →</a>
-                </article>
-
-                <article class="info-card">
-                    <h3>NPTEL – The Joy of Computing Using Python</h3>
-                    <a href="./nptel-python.pdf" class="text-link" target="_blank" rel="noopener noreferrer">View Certificate →</a>
-                </article>
-
-                <article class="info-card">
-                    <h3>Simplilearn – Prompt Engineering</h3>
-                    <a href="./simplilearn-prompt.pdf" class="text-link" target="_blank" rel="noopener noreferrer">View Certificate →</a>
-                </article>
-
-                <article class="info-card">
-                    <h3>LinkedIn Learning – Internet of Things</h3>
-                    <a href="./linkedin-iot.pdf" class="text-link" target="_blank" rel="noopener noreferrer">View Certificate →</a>
-                </article>
-
-                <article class="info-card">
-                    <h3>LinkedIn Learning – Artificial Intelligence</h3>
-                    <a href="./linkedin-ai.pdf" class="text-link" target="_blank" rel="noopener noreferrer">View Certificate →</a>
-                </article>
-
-                <article class="info-card">
-                    <h3>Simplilearn – Java</h3>
-                    <a href="./simplilearn-java.pdf" class="text-link" target="_blank" rel="noopener noreferrer">View Certificate →</a>
-                </article>
-
-                <article class="info-card">
-                    <h3>Infosys Springboard – HTML</h3>
-                    <a href="./infosys-html.pdf" class="text-link" target="_blank" rel="noopener noreferrer">View Certificate →</a>
-                </article>
-
-                <article class="info-card">
-                    <p class="card-date">Professional Membership</p>
-                    <h3>ACM Membership</h3>
-                    <p>Association for Computing Machinery membership.</p>
-                    <a href="./acm-membership.pdf" class="text-link" target="_blank" rel="noopener noreferrer">View Membership Card →</a>
-                </article>
-
-                <article class="info-card">
-                    <p class="card-date">June – July 2026</p>
-                    <h3>Web Development Internship</h3>
-                    <p><strong>Thiranex</strong></p>
-                    <p>Web development learning and practical experience.</p>
-                    <a href="./thiranex-web-development.pdf" class="text-link" target="_blank" rel="noopener noreferrer">View Certificate →</a>
-                </article>
-
-                <article class="info-card">
-                    <p class="card-date">January – March 2026</p>
-                    <h3>Prompt Engineering</h3>
-                    <p><strong>EduSkills</strong></p>
-                    <p>Learning prompt design and generative AI concepts.</p>
-                    <a href="./eduskills-prompt-engineering.pdf" class="text-link" target="_blank" rel="noopener noreferrer">View Certificate →</a>
-                </article>
-
-                <article class="info-card">
-                    <p class="card-date">January – March 2025</p>
-                    <h3>Google Android Development</h3>
-                    <p><strong>EduSkills</strong></p>
-                    <p>Android development learning program.</p>
-                    <a href="./eduskills-android-development.pdf" class="text-link" target="_blank" rel="noopener noreferrer">View Certificate →</a>
-                </article>
-
-                <article class="info-card">
-                    <p class="card-date">November 2025</p>
-                    <h3>Android App Development Workshop</h3>
-                    <p><strong>APSSDC</strong></p>
-                    <p>Participation in an Android application development workshop.</p>
-                    <a href="./apssdc-android-workshop.pdf" class="text-link" target="_blank" rel="noopener noreferrer">View Certificate →</a>
-                </article>
-
+            <div class="skill-card">
+                <h3>Soft Skills</h3>
+                <div class="skill-tags">
+                    <span>Communication</span><span>Teamwork</span>
+                    <span>Problem Solving</span><span>Adaptability</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- PUBLICATION AND ACTIVITIES -->
-    <section id="activities" class="section">
-        <div class="container">
-            <div class="section-heading">
-                <p class="section-subtitle">Beyond Academics</p>
-                <h2>Publication & Activities</h2>
-            </div>
+    
+<!-- Certifications -->
+<section class="section" id="certifications">
+    <h2 class="section-title">My <span>Certificates</span></h2>
 
-            <div class="info-grid">
-                <article class="info-card">
-                    <p class="card-date">NCTCT-2025</p>
-                    <h3>Automated Fan Control System</h3>
-                    <p>Abstract publication.</p>
-                    <p><strong>ISBN:</strong> 978-93-342-4654-4</p>
-                    <a href="./ict%20paper.pdf" class="text-link" target="_blank" rel="noopener noreferrer">View Publication →</a>
-                </article>
+    <div class="card-grid">
 
-                <article class="info-card">
-                    <p class="card-date">Professional Membership</p>
-                    <h3>Association for Computing Machinery (ACM)</h3>
-                    <p>Professional membership in the computing field.</p>
-                    <a href="./acm-membership.pdf" class="text-link" target="_blank" rel="noopener noreferrer">View Membership Card →</a>
-                </article>
-            </div>
+        <!-- 1. Oracle AI Foundations -->
+        <article class="info-card">
+            <p class="card-date">August 2026</p>
+            <h3>Oracle Cloud Infrastructure Certified AI Foundations Associate</h3>
+            <a href="./certificates/oracle-ai.pdf"
+               class="text-link" target="_blank"
+               rel="noopener noreferrer">
+                View Certificate →
+            </a>
+        </article>
+
+        <!-- 2. TCS iON Yuva AI -->
+        <article class="info-card">
+            <p class="card-date">May 2026</p>
+            <h3>TCS iON Yuva AI for All</h3>
+            <a href="./certificates/tcs-yuva-ai.pdf"
+               class="text-link" target="_blank"
+               rel="noopener noreferrer">
+                View Certificate →
+            </a>
+        </article>
+
+        <!-- 3. Google Cloud Generative AI -->
+        <article class="info-card">
+            <p class="card-date">April 2026</p>
+            <h3>Google Cloud Generative AI</h3>
+            <a href="./certificates/google-generative-ai.pdf"
+               class="text-link" target="_blank"
+               rel="noopener noreferrer">
+                View Certificate →
+            </a>
+        </article>
+
+        <!-- 4. NPTEL Python -->
+        <article class="info-card">
+            <p class="card-date">October 2025</p>
+            <h3>NPTEL – The Joy of Computing Using Python</h3>
+            <a href="./certificates/nptel-python.pdf"
+               class="text-link" target="_blank"
+               rel="noopener noreferrer">
+                View Certificate →
+            </a>
+        </article>
+
+        <!-- 5. Simplilearn Prompt Engineering -->
+        <article class="info-card">
+            <p class="card-date">February 2025</p>
+            <h3>Simplilearn – Prompt Engineering</h3>
+            <a href="./certificates/simplilearn-prompt.pdf"
+               class="text-link" target="_blank"
+               rel="noopener noreferrer">
+                View Certificate →
+            </a>
+        </article>
+
+        <!-- 6. LinkedIn Learning IoT -->
+        <article class="info-card">
+            <p class="card-date">November 2024</p>
+            <h3>LinkedIn Learning – Internet of Things</h3>
+            <a href="./certificates/linkedin-iot.pdf"
+               class="text-link" target="_blank"
+               rel="noopener noreferrer">
+                View Certificate →
+            </a>
+        </article>
+
+        <!-- 7. LinkedIn Learning AI -->
+        <article class="info-card">
+            <p class="card-date">October 2024</p>
+            <h3>LinkedIn Learning – Artificial Intelligence</h3>
+            <a href="./certificates/linkedin-ai.pdf"
+               class="text-link" target="_blank"
+               rel="noopener noreferrer">
+                View Certificate →
+            </a>
+        </article>
+
+        <!-- 8. Simplilearn Java -->
+        <article class="info-card">
+            <p class="card-date">October 2024</p>
+            <h3>Simplilearn – Java</h3>
+            <a href="./certificates/simplilearn-java.pdf"
+               class="text-link" target="_blank"
+               rel="noopener noreferrer">
+                View Certificate →
+            </a>
+        </article>
+
+        <!-- 9. Infosys Springboard HTML -->
+        <article class="info-card">
+            <p class="card-date">August 2024</p>
+            <h3>Infosys Springboard – HTML</h3>
+            <a href="./certificates/infosys-html.pdf"
+               class="text-link" target="_blank"
+               rel="noopener noreferrer">
+                View Certificate →
+            </a>
+        </article>
+
+    </div>
+</section>
+
+
+    <!-- Publication and activities -->
+    <section class="section" id="activities">
+        <h2 class="section-title">Publication & <span>Activities</span></h2>
+
+        <div class="card-grid">
+            
+
+
+<article class="info-card">
+    <p class="card-date">NCTCT-2025</p>
+    <h3>Automated Fan Control System</h3>
+    <p>Abstract publication.</p>
+    <p><strong>ISBN:</strong> 978-93-342-4654-4</p>
+
+    <a href="./publications/ict%20paper.pdf"
+       class="text-link"
+       target="_blank"
+       rel="noopener noreferrer">
+        View Publication →
+    </a>
+</article>
+
+
+
+<article class="info-card">
+    <p class="card-date">Professional Membership</p>
+    <h3>ACM Membership</h3>
+    <p>Association for Computing Machinery (ACM) membership.</p>
+
+    <a href="./certificates/acm-membership.pdf"
+       class="text-link"
+       target="_blank"
+       rel="noopener noreferrer">
+        View Membership Card →
+    </a>
+</article>
+
+            <article class="info-card">
+                <h3>Extracurricular Activities</h3>
+                <p>Participation in hackathons, coding competitions, and workshops.</p>
+            </article>
+
+            <article class="info-card">
+                <h3>Languages</h3>
+                <p>English, Telugu, Hindi</p>
+            </article>
         </div>
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="section alternate">
-        <div class="container">
-            <div class="section-heading">
-                <p class="section-subtitle">Let's Connect</p>
-                <h2>Contact Me</h2>
-            </div>
+    <!-- Contact -->
+    <section class="section" id="contact">
+        <h2 class="section-title">Contact <span>Me</span></h2>
 
-            <div class="contact-card">
-                <p>
-                    I am interested in entry-level opportunities where I can
-                    apply my knowledge and continue developing my skills.
-                </p>
-                <p><strong>Email:</strong> Add your email address</p>
-                <p><strong>LinkedIn:</strong> Add your LinkedIn profile link</p>
-                <p>
-                    <strong>GitHub:</strong>
-                    <a class="text-link"
-                       href="https://github.com/Tejaswini-2712"
-                       target="_blank"
-                       rel="noopener noreferrer">Visit my GitHub →</a>
-                </p>
-            </div>
+        <div class="contact-card">
+            <p>I'm interested in opportunities to learn, contribute, and grow.</p>
+
+            <p>
+                <strong>Email:</strong>
+                <a href="mailto:tejaswinigavara825@gmail.com">
+                    tejaswinigavara825@gmail.com
+                </a>
+            </p>
+
+            <p>
+                <strong>LinkedIn:</strong>
+                <a href="https://www.linkedin.com/in/gavara-tejaswini-1335362ba"
+                   target="_blank" rel="noopener noreferrer">
+                    View LinkedIn Profile
+                </a>
+            </p>
+
+            <p>
+                <strong>GitHub:</strong>
+                <a href="https://github.com/Tejaswini-2712"
+                   target="_blank" rel="noopener noreferrer">
+                    View GitHub Profile
+                </a>
+            </p>
+
+            <a href="mailto:tejaswinigavara825@gmail.com" class="btn">
+                Send Me an Email
+            </a>
         </div>
     </section>
-
 </main>
 
-<footer>
-    <div class="container">
-        <p>© 2026 Tejaswini. All rights reserved.</p>
-    </div>
+<footer class="footer">
+    <p>© <span id="year"></span> Gavara Tejaswini. All rights reserved.</p>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
