@@ -51,3 +51,4 @@ if ("IntersectionObserver" in window) {
         observer.observe(section);
     });
 }
+
